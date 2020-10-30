@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+function valempid()
+{
+	var id = document.getElementById('eid').value;
+	if(id.length<8)
+		alert("Invalid ID");
+	else
+		alert("Your Employee ID is "+id);
+		
+}
+function valpwd()
+{
+	var pwd = document.getElementById('pwd').value;
+	if(pwd.length<8)
+		alert("Invalid Password");
+	else
+		alert("Your Password is "+pwd);
+}
+function disp()
+{
+	var i1=document.getElementById('eid').value;
+	var i2=document.getElementById('pwd').value;
+	document.getElementById('Display').innerHTML = "Your Employee ID is "+i1;
+	document.getElementById('Display').innerHTML = "Yout Password is "+i2;
+}
+</script>
+</head>
+<body>
+<h3>Employee ID : </h3><input type='text' id='eid' onblur='valempid()'>
+<br>
+<br>
+<h3>Password : </h3><input type='text' id='pwd' onblur='valpwd()'>
+<br>
+<br>
+<div id='Display'></div>
+<br>
+<br>
+<input type='submit' onclick='disp()' value='ADD'>
+</body>
+</html>

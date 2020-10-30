@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+var x = 450;
+alert("The value of x is "+x);
+console.log("The value of x is "+x);
+</script>
+</head>
+<body>	
+<h1>This page is used for testing Javascript.</h1>
+<script>
+
+function add(x,y)
+{
+	alert("Entered the function");
+	return x+y;
+}
+
+function clicker()
+{
+	alert("I am clicked");
+}
+
+function shownum(x)
+{
+	for(i=0;i<x;i++)
+	{
+		alert(x);
+	}
+}
+var num =[1,2,3,4];
+function dispar()
+{
+	for(i=0;i<num.length;i++)
+		alert(num[i]);
+}
+</script>
+<script src="test.js"></script>
+<script>
+ var result = add(30,40);
+ console.log("The Result is " + result);	
+ shownum(5); 
+ dispar();
+</script>
+<input type="submit" onclick="first()" value="First Button"></input>
+<br>
+<br>
+<input type="submit" onclick="second()" value="Second Button"></input>
+</body>
+</html>
