@@ -1,0 +1,37 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd">
+   <context:annotation-config></context:annotation-config>
+   <context:component-scan base-package="hsbc"></context:component-scan>
+	<!-- Define the beans Here -->
+	<bean id='cust1' class='hsbc.Customer'>
+	<property name='customerId' value='100'></property>
+	<property name='name' value='Inteuron Ltd'></property>
+	<property name='amount' value='100000'></property>	
+	</bean>
+
+	<bean id='cust2' class='hsbc.Customer'>
+	<property name='customerId' value='200'></property>
+	<property name='name' value='Zerodha Ltd'></property>
+	<property name='amount' value='300000'></property>		
+	</bean>	
+	
+	<bean id="cust3" class="hsbc.Customer">
+	<constructor-arg index="0" value="55"/>
+	<constructor-arg index="1" value="Mahindra"/>
+	<constructor-arg index="2" value="550000"/>		
+	</bean>
+	
+	<bean id="add1" class="hsbc.Address">
+	<property name='building' value='Mayfair Heights'></property>
+	<property name='street' value='Regent Street'></property>
+	<property name='city' value='Nottingham'></property>
+	</bean>
+
+
+
+</beans>
